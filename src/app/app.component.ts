@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  loginAttempts = 0;
+
+  headerTitle = 'seagate corp';
+
+  countLogin() {
+    this.loginAttempts = this.loginAttempts + 1;
+  }
 }

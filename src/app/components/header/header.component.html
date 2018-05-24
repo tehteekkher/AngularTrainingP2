@@ -1,0 +1,16 @@
+<h1 [style.color]="color" 
+  [class]="bgColor">
+  {{ title }}
+</h1>
+<div>
+  <label>email</label>
+  <input type="email" [(ngModel)]="credential.email">
+</div>
+<div>
+  <label>password</label>
+  <input type="password" [(ngModel)]="credential.password">
+</div>
+<button 
+  type="button"
+  (click)="login(credential.email, credential.password)"
+>login</button>
