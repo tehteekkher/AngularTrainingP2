@@ -8,7 +8,7 @@ import { StatusEmit } from '../../interfaces/status-emit.interface';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
   @Input()

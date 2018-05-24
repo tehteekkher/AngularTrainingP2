@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Post } from '../interfaces/post.interface';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class PostService {
 
   getAll2() {
     // get data from api
-    const api = 'https://jsonplaceholder.typicode.com/posts';
+    const api = environment.apiBaseUrl + '/posts';
     return this.http.get<Post[]>(api);
   }
 

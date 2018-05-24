@@ -19,7 +19,7 @@ export class ContentComponent implements OnInit {
     // to get the list of post
     // this.posts = this.postSvc.getAll();
 
-    this.getPosts();
+    this.getPostsAsync();
   }
 
   getPosts() {
@@ -27,6 +27,17 @@ export class ContentComponent implements OnInit {
       .subscribe(data => {
         this.posts = data;
       });
+  }
+
+  getPostsPromise() {
+    this.postSvc.getAll2().toPromise()
+      .then(data => {
+        this.posts = data;
+      });
+  }
+
+  async getPostsAsync() {
+    this.posts = await this.postSvc.getAll2().toPromise();
   }
 
 }
