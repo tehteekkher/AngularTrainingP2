@@ -15,7 +15,7 @@ export class AppComponent {
     return this.failedAttempts >= 3;
   }
 
-  headerTitle = 'seagate corp';
+  headerTitle = 'xxx corp';
 
   countLogin(statusObj: StatusEmit) {
     if (statusObj.status === 'FAIL') {

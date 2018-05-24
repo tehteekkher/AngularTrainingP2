@@ -1,5 +1,15 @@
 <!-- loop thru the list of posts and display here -->
 <ul>
+  <li>{{ 1 | formatNum }} </li>
+  <li>{{ 23 | formatNum }} </li>
+  <li>{{ '3AB' | formatNum }} </li>
+  <li>{{ 123456 | formatNum }} </li>
+  <li>{{ {} | formatNum }} </li>
+  <li>{{ 1 | formatNum:7 }} </li>
+  <li>{{ 23 | formatNum:7 }} </li>
+  <li>{{ '3AB' | formatNum:7 }} </li>
+</ul>
+<ul>
   <li *ngFor="let post of posts">
     {{ post.id }} - {{ post.title }}
   </li>
