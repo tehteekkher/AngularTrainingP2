@@ -1,6 +1,13 @@
 <app-header 
     title="{{headerTitle}}"
-    (loginTrial)="countLogin()"
+    (loginTrial)="countLogin($event)"
+    *ngIf="!shouldHideHeader"
     ></app-header>
 
-<h2>login attempts: {{ loginAttempts }}</h2>
+<h2>login attempts: {{ loginAttempts.length }}</h2>
+
+<ul>
+    <li *ngFor="let attempt of loginAttempts">Login: {{ attempt.status }}</li>
+</ul>
+
+<app-content></app-content>
