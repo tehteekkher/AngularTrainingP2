@@ -4,14 +4,16 @@ import { CustomerListPageComponent } from './components/customer-list-page/custo
 import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerDetailPageComponent } from './components/customer-detail-page/customer-detail-page.component';
 import { CustomerAddPageComponent } from './components/customer-add-page/customer-add-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomerAddReativePageComponent } from './components/customer-add-reative-page/customer-add-reative-page.component';
 
 @NgModule({
   imports: [
     CommonModule,
     CustomerRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  declarations: [CustomerListPageComponent, CustomerDetailPageComponent, CustomerAddPageComponent]
+  declarations: [CustomerListPageComponent, CustomerDetailPageComponent, CustomerAddPageComponent, CustomerAddReativePageComponent]
 })
 export class CustomerModule { }

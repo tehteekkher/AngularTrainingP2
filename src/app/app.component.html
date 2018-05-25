@@ -1,4 +1,4 @@
-<!-- <app-header 
+<app-header 
     (loginTrial)="countLogin($event)"
     *ngIf="!shouldHideHeader"
     ></app-header>
@@ -7,6 +7,6 @@
 
 <ul>
     <li *ngFor="let attempt of loginAttempts">Login: {{ attempt.status }}</li>
-</ul> -->
+</ul>
 
 <router-outlet></router-outlet>

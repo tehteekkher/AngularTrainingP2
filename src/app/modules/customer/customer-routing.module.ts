@@ -5,6 +5,7 @@ import { CustomerListPageComponent } from './components/customer-list-page/custo
 import { CustomerDetailPageComponent } from './components/customer-detail-page/customer-detail-page.component';
 import { ExitGuard } from '../../guards/exit.guard';
 import { CustomerAddPageComponent } from './components/customer-add-page/customer-add-page.component';
+import { CustomerAddReativePageComponent } from './components/customer-add-reative-page/customer-add-reative-page.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
     canDeactivate: [ExitGuard]
   },
   { path: 'add', component: CustomerAddPageComponent },
+  { path: 'add2', component: CustomerAddReativePageComponent },
   { path: ':id', component: CustomerDetailPageComponent },
 ];
 
