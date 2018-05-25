@@ -10,6 +10,7 @@ import { NvlPipe } from './pipes/nvl.pipe';
 import { FormatNumPipe } from './pipes/format-num.pipe';
 import { PostPageComponent } from './components/post-page/post-page.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     ContentComponent,
     NvlPipe,
     FormatNumPipe,
-    PostPageComponent
+    PostPageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
