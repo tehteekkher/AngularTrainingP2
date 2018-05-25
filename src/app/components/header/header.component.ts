@@ -37,6 +37,9 @@ export class HeaderComponent implements OnInit {
     console.log(email, pwd);
 
     if (email === 'a@a.c' && pwd === '111') {
+      // set local storage
+      localStorage.setItem('isLogin', '1');
+
       alert('login sucessful');
 
       this.loginTrial.emit({ status: 'SUCCESS' });
