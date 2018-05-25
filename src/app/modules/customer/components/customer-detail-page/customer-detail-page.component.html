@@ -1,0 +1,8 @@
+<div [style.backgroundColor]="bgColor">
+    <h1 *ngIf="customer">
+        {{ customer.id }} - {{ customer.name }}
+      </h1>
+      <a routerLink="/customers/3"  >Next</a>
+      
+      <button type="button" (click)="nextCustomer(3)">Next</button>
+</div>

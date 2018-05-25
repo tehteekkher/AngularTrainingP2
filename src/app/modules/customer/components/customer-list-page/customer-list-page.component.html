@@ -1,6 +1,11 @@
 <h1>Customers</h1>
 <ul>
   <li *ngFor="let cust of customers">
-    {{ cust.id }} - {{ cust.name }}
+    <!-- <a routerLink="/customers/{{cust.id}}">
+        {{ cust.id }} - {{ cust.name }}
+    </a> -->
+    <a [routerLink]="['../', cust.id]">
+      {{ cust.id }} - {{ cust.name }}
+  </a>
   </li>
 </ul>
