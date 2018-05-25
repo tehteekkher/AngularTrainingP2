@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PostPageComponent } from './components/post-page/post-page.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
     { path: '', redirectTo: '/posts', pathMatch: 'full' },
@@ -10,6 +11,7 @@ const routes: Routes = [
     // lazy loading
     {
         path: 'customers',
+        canActivate: [LoginGuard],
         loadChildren: 'src/app/modules/customer/customer.module#CustomerModule'
     },
     // should be the last route,
