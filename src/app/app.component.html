@@ -3,10 +3,10 @@
     *ngIf="!shouldHideHeader"
     ></app-header>
 
-<h2>login attempts: {{ loginAttempts.length }}</h2>
+<p>login attempts: {{ loginAttempts.length }}</p>
 
 <ul>
     <li *ngFor="let attempt of loginAttempts">Login: {{ attempt.status }}</li>
 </ul>
 
-<app-content></app-content>
+<router-outlet></router-outlet>

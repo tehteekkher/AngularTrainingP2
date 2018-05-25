@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContentComponent } from './components/content/content.component';
 import { NvlPipe } from './pipes/nvl.pipe';
 import { FormatNumPipe } from './pipes/format-num.pipe';
+import { PostPageComponent } from './components/post-page/post-page.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import { FormatNumPipe } from './pipes/format-num.pipe';
     HeaderComponent,
     ContentComponent,
     NvlPipe,
-    FormatNumPipe
+    FormatNumPipe,
+    PostPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
