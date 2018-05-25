@@ -7,6 +7,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
     { path: '', redirectTo: '/posts', pathMatch: 'full' },
     { path: 'posts', component: PostPageComponent },
+    // lazy loading
+    {
+        path: 'customers',
+        loadChildren: 'src/app/modules/customer/customer.module#CustomerModule'
+    },
     // should be the last route,
     // because angular follow the defined route sequence
     { path: '**', component: PageNotFoundComponent }
